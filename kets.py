@@ -504,16 +504,16 @@ def assembleAssessment(ref_fa, asb_fa, kmer_length, sample_num, prefix):
           "{:<24.7f}Complete and duplicated\n"
           "{:<24.7f}Proportion of the largest categories\n"
           "{:<24.7f}ave distance diff\n"
-          "{:<24.7f}Inter-contig Average Distance Difference\n"
-          "{:<24.7f}Length of the k-mer-based Longest Increasing Subsequence\n".format(singleCopy + duplicateRate, singleCopy, duplicateRate,proportion_of_the_largest_categories, ave_distance_diff,LIS_distance_diff,ave_scaffold_diff))
+          "{:<24.7f}Length of the k-mer-based Longest Increasing Subsequence\n"
+          "{:<24.7f}Inter-contig Average Distance Difference\n".format(singleCopy + duplicateRate, singleCopy, duplicateRate,proportion_of_the_largest_categories, ave_distance_diff,LIS_distance_diff,ave_scaffold_diff))
     with open("result.report", "w") as fi:
         fi.write("{:<24.7f}Complete\n"
                  "{:<24.7f}Complete and single-copy\n"
                  "{:<24.7f}Complete and duplicated\n"
                  "{:<24.7f}Proportion of the largest categories\n"
                  "{:<24.7f}ave distance diff\n"
-                 "{:<24.7f}Inter-contig Average Distance Difference\n"
-                 "{:<24.7f}Length of the k-mer-based Longest Increasing Subsequence\n".format(singleCopy + duplicateRate, singleCopy, duplicateRate,proportion_of_the_largest_categories, ave_distance_diff,LIS_distance_diff,ave_scaffold_diff))
+                 "{:<24.7f}Length of the k-mer-based Longest Increasing Subsequence\n"
+                 "{:<24.7f}Inter-contig Average Distance Difference\n".format(singleCopy + duplicateRate, singleCopy, duplicateRate,proportion_of_the_largest_categories, ave_distance_diff,LIS_distance_diff,ave_scaffold_diff))
         fi.close()
 
 if __name__ == "__main__":
@@ -530,3 +530,4 @@ if __name__ == "__main__":
     asb_seq_path = os.path.join(path,asb_seq)
     ref_seq_path = os.path.join(path,ref_seq)
     assembleAssessment(ref_seq_path, asb_seq_path, kmer_len, sample_num, prefix)
+
